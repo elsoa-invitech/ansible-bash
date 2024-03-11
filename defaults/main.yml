@@ -1,5 +1,7 @@
 # defaults file
 ---
+bash_bashrc_template: "etc/skel/.bashrc.j2"
+bash_bashaliases_template: "etc/skel/.bash_aliases.j2"
 bash_bashrc_destinations:
   skell:
     dest: /etc/skel

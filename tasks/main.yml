@@ -13,7 +13,7 @@
 
 - name: create configuration file - .bashrc
   ansible.builtin.template:
-    src: etc/skel/.bashrc.j2
+    src: "{{ bash_bashrc_template }}"
     dest: "{{ item.value.dest }}/.bashrc"
     owner: "{{ item.value.owner | default('root') }}"
     group: "{{ item.value.group | default(item.value.owner) | default('root') }}"
@@ -26,7 +26,7 @@
 
 - name: create configuration file - .bash_aliases
   ansible.builtin.template:
-    src: etc/skel/.bash_aliases.j2
+    src: "{{ bash_bashaliases_template }}"
     dest: "{{ item.value.dest }}/.bash_aliases"
     owner: "{{ item.value.owner | default('root') }}"
     group: "{{ item.value.group | default(item.value.owner) | default('root') }}"
