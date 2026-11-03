@@ -17,6 +17,7 @@ bash_checkwinsize: true
 bash_globstar: false
 bash_force_color_prompt: true
 bash_fancy_prompt_prompt: true
+bash_full_hostname_prompt: false
 
 bashrc_lines: []
 
